@@ -20,10 +20,24 @@ class NewsTableViewController: UITableViewController {
         
         populateNews()
     }
+
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return articles.count
+    }
     
-    private func populateNews() {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ArticleTableViewCell", for: indexPath) as? ArticleTableViewCell else { fatalError("ArticleTableViewCell does not exist") }
+        
+        cell.titleLabel.text = articles[indexPath.row].title
+        cell.descriptionLabel.text = articles[indexPath.row].description
+        return cell
+    }
+}
+
+private extension NewsTableViewController {
+    func populateNews() {
         let apiKey = "GET-YOUR-PRIVATE-API-KEY"
-        let url = URL(string: "https://newsapi.org/v2/top-headlines?country=us&apiKey=apiKey")!
+        let url = URL(string: "https://newsapi.org/v2/top-headlines?country=us&apiKey=\(apiKey)")!
         
         Observable.just(url)
             .flatMap { url -> Observable<Data> in
