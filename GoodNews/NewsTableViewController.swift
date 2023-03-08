@@ -8,7 +8,6 @@
 import Foundation
 import UIKit
 
-
 class NewsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
