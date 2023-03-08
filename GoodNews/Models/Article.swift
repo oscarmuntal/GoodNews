@@ -23,5 +23,5 @@ extension ArticlesResponse {
 
 struct Article: Decodable {
     let title: String
-    let description: String
+    let description: String?
 }
