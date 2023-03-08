@@ -8,7 +8,6 @@
 import Foundation
 import RxSwift
 import RxCocoa
-import UIKit
 
 struct Resource<T: Decodable> {
     let url: URL

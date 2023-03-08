@@ -5,7 +5,6 @@
 //  Created by Òscar Muntal on 8/3/23.
 //
 
-import Foundation
 import UIKit
 import RxSwift
 import RxCocoa
@@ -36,12 +35,7 @@ class NewsTableViewController: UITableViewController {
 
 private extension NewsTableViewController {
     func populateNews() {
-        let apiKey = "GET-YOUR-PRIVATE-API-KEY"
-        let url = URL(string: "https://newsapi.org/v2/top-headlines?country=us&apiKey=\(apiKey)")!
-        
-        let resource = Resource<ArticlesResponse>(url: url)
-        
-        URLRequest.requestDecodable(resource: resource)
+        URLRequest.requestDecodable(resource: ArticlesResponse.all)
             .subscribe(onNext: { [weak self] result in
                 if let result = result {
                     self?.articles = result.articles

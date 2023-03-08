@@ -77,12 +77,12 @@
 		1FF9E59929C0B1C0008377A5 /* GoodNews */ = {
 			isa = PBXGroup;
 			children = (
-				1FF9E5B629C0B1C0008377A5 /* Extensions */,
-				1FF9E5B329C0B1C0008377A5 /* Cells */,
-				1FF9E5B029C0B1C0008377A5 /* Models */,
 				1FF9E59A29C0B1C0008377A5 /* AppDelegate.swift */,
 				1FF9E59C29C0B1C0008377A5 /* SceneDelegate.swift */,
 				1FF9E5AE29C0B1C0008377A5 /* NewsTableViewController.swift */,
+				1FF9E5B629C0B1C0008377A5 /* Extensions */,
+				1FF9E5B329C0B1C0008377A5 /* Cells */,
+				1FF9E5B029C0B1C0008377A5 /* Models */,
 				1FF9E5A029C0B1C0008377A5 /* Main.storyboard */,
 				1FF9E5A329C0B1C0008377A5 /* Assets.xcassets */,
 				1FF9E5A529C0B1C0008377A5 /* LaunchScreen.storyboard */,
